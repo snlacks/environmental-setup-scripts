@@ -1,0 +1,13 @@
+services:
+  db:
+    image: mysql
+    container_name: auth-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD
+    ports:
+      - 3306:3306
+    volumes:
+      - auth-db-vol:/var/lib/mysql
+
+volumes:
+  auth-db-vol:
